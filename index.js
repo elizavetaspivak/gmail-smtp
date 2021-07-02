@@ -3,7 +3,6 @@ var cors = require('cors')
 var bodyParser = require('body-parser')
 const nodemailer = require("nodemailer");
 const app = express()
-const port = 3010
 
 app.use(cors({origin: 'https://elizavetaspivak.github.io'}))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -45,6 +44,8 @@ app.post('/sendMessage', async function (req, res) {
 
     res.send('Ok!')
 })
+
+let port = process.env.PORT || 3010
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
