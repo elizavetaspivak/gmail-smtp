@@ -45,9 +45,7 @@ app.post('/sendMessage', async function (req, res) {
     res.send('Ok!')
 })
 
-let port = 8000
-
-// process.env.PORT ||/
+let port = process.env.PORT || 8000
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
