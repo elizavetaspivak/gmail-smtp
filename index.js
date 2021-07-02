@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const app = express()
 const port = 3010
 
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors({origin: 'https://elizavetaspivak.github.io'}))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
